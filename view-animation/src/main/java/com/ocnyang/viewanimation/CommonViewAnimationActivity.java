@@ -17,6 +17,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 
 public class CommonViewAnimationActivity extends AppCompatActivity {
     private static final String TAG = "View Animation";
@@ -32,6 +33,12 @@ public class CommonViewAnimationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 doAnimation(getAnimationSet(true), getString(R.string.animation_set));
+            }
+        });
+        mPuppet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "click view", Toast.LENGTH_LONG).show();
             }
         });
     }

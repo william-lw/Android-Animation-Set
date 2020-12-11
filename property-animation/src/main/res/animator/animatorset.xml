@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
      android:interpolator="@android:anim/accelerate_decelerate_interpolator"
-     android:ordering="together">
+     android:ordering="sequentially">
 
     <objectAnimator
         android:duration="3000"
@@ -11,6 +11,33 @@
         android:startOffset="0"
         android:valueFrom="?attr/colorAccent"
         android:valueTo="?attr/colorPrimary"/>
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="textColor"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="#ff0011e5"
+        android:valueTo="#ffff00ff"/>
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="textSize"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="15"
+        android:valueTo="25"/>
+
+    <objectAnimator
+        android:duration="2000"
+        android:propertyName="text"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"
+        android:valueFrom="70"
+        android:valueTo="100"/>
 
     <objectAnimator
         android:duration="3000"

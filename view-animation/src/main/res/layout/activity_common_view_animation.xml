@@ -25,6 +25,7 @@
         android:padding="20dp"
         android:src="@drawable/ic_taiji"
         android:translationZ="5dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

@@ -11,12 +11,14 @@ import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,12 @@ public class PropertyAnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_property_animation);
         mPuppet = findViewById(R.id.view_puppet);
         initToolbar();
+        mPuppet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(PropertyAnimationActivity.this, "click view", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -51,9 +59,9 @@ public class PropertyAnimationActivity extends AppCompatActivity {
         if (i == android.R.id.home) {
             finish();
         } else if (i == R.id.action_do_byxml) {
-            doAnimation(getAnimationDrawable(false));
-        } else if (i == R.id.action_bycode) {
             doAnimation(getAnimationDrawable(true));
+        } else if (i == R.id.action_bycode) {
+            doAnimation(getAnimationDrawable(false));
         } else if (i == R.id.action_bycustom) {
             doAnimation(getValueAnimatorByCustom());
         } else if (i == R.id.action_byviewpropertyanimator) {
