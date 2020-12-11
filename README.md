@@ -1,3 +1,4 @@
+# clone from git@github.com:OCNYang/Android-Animation-Set.git
 # Android Animation Detailed Tutorial / Android 动画详尽教程
 
 [![GitHub issues](https://img.shields.io/github/issues/OCNYang/Android-Animation-Set.svg)](https://github.com/OCNYang/Android-Animation-Set/issues)&ensp;&ensp;
